@@ -1,0 +1,214 @@
+
+h1 {
+
+	background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.46) 29%,rgba(0,0,0,0) 100%);
+	background: cover;
+	height: 200px;
+	width: 100%;
+	text-align: center;
+	padding-top: 100px;
+	font-size: 60px;
+}
+
+.title {
+	text-align: center;
+	text-decoration: underline;
+    cursor: pointer;
+    -webkit-animation: font 3s infinite;
+}
+
+.sub {
+	margin: 100px;
+}
+
+.wrapper {
+	margin-top: 100px;
+	margin-left: 120px;
+	display: inline-block;
+	width: 60%;
+
+		.para {
+			margin-top: 150px;
+		}
+}
+
+.sidebar {
+	display: inline-block;
+	float: right;
+	margin-right: 100px;
+	margin-left: 30px;
+	width: 15%;
+
+		.ex {
+			margin-top: 180px;
+			font-size: 22px;
+			display: block;
+			height: 30px;
+			width: 150px;
+			color: white;
+			text-align: center;
+			background-color: rgb(71, 119, 69);
+			float: right;
+			margin-right: 60px;
+			border-radius: 10px;
+			transition: all 1s ease;
+		}
+
+		.ex-big {
+			height: 50px;
+			width: 200px;
+			color: white;
+			letter-spacing: 2px;
+			text-align: center;
+			background-color: rgb(71, 119, 69);
+			float: right;
+			margin-top: 100px;
+			border-radius: 10px;
+			font-size: 26px;
+			line-height: 42px;
+			box-shadow: inset  0px -10px 0px 0px rgb(43, 87, 32);
+			text-shadow: 0px 2px 1px  rgb(37, 35, 35);
+		}
+}
+
+.overhere:hover {
+	height: 100px;
+}
+
+.clickme:active {
+	height: 100px;
+}
+
+.push:active {
+	height: 100px;
+	width: 100px;
+}
+
+.push:hover {
+	border-radius: 100px;
+}
+
+.colors:hover {
+	background-color: yellow;
+}
+
+.font:hover {
+	font-size: 100px;
+	color: black
+}
+
+.dis:active {
+	visibility: hidden;
+}
+
+.down:hover {
+	height: 45px;
+	margin-top: 105px;
+	box-shadow: inset 0px -5px 0px rgb(43, 87, 32);
+	transition: all .5s ease;
+}
+
+.down:active {
+	height: 41px;
+	margin-top: 109px;
+	box-shadow: inset 0px -1px 0px rgb(43, 87, 32);
+	transition: all .5 ease;
+}
+
+.shadow:hover {
+	line-height: 35px;
+	text-shadow: 0px 10px 5px rgb(37, 35, 35);
+	transition: all 1s ease;
+}
+
+.shadow:active {
+	line-height: 42px;
+	text-shadow: 0px 1px 1px rgb(37, 35, 35);
+	height: 41px;
+	margin-top: 109px;
+	box-shadow: inset 0px -1px 0px rgb(43, 87, 32);
+	transition: all .3s ease;
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(720deg);
+	}
+}
+
+.transparent {
+	margin-top: 100px;
+	height: 310;
+	width: 280;
+	display: inline-block;
+	background-image: url(http://headshotsmarathon.org/home/wp-content/uploads/2012/02/Megaman8bit.jpg);
+	
+}
+
+.transparent:active {
+	display: inline-block;
+	margin-top: 100px;
+	height: 310;
+	width: 410;
+	background-image: url(http://static.gamesradar.com/images/mb/GamesRadar/us/Games/M/Mega%20Man%209/Everything%20Else/Raw/rock1--article_image.jpg);
+
+}
+
+.spin {
+	width: 80px;
+	height: 80px;
+	margin-top: 1700px;
+	-webkit-animation: spin 2s infinite;
+}
+
+.rectangle {
+	text-align: center;
+	font-size: 40px;
+	line-height: 190px;
+	border-radius: 8px;
+	display: inline-block;
+	margin-top: 100px;
+	background-color: rgb(71, 119, 69);
+	width: 400px;
+	height: 200px;
+}
+
+.monkey {
+	display: inline-block;
+	margin-top: 100px;
+	cursor: pointer;
+
+}
+
+.key {
+	margin-top: 1800px;
+}
+
+.ex-bottom {
+	height: 50px;
+	width: 200px;
+	color: white;
+	letter-spacing: 2px;
+	text-align: center;
+	margin-top: 950px;
+	background-color: rgb(71, 119, 69);
+	float: right;
+	margin-top: 100px;
+	border-radius: 10px;
+	font-size: 26px;
+	line-height: 42px;
+	box-shadow: inset  0px -10px 0px 0px rgb(43, 87, 32);
+	text-shadow: 0px 2px 1px  rgb(37, 35, 35);
+}
+
+.press {
+	margin-top: 1000px;
+}
+
+
+
+
+
