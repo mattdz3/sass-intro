@@ -1,4 +1,22 @@
-@import "burbon";
+@import "bourbon";
+
+@-webkit-keyframes font {
+        0%, 100% {
+            font-size: 30px;
+        }
+        50% {
+            font-size: 60px;
+        }
+}
+
+@-webkit-keyframes font2 {
+        0%, 100% {
+        	font-size: 10px;
+        }
+        50% {
+            font-size: 38px;
+        }
+}
 
 @-webkit-keyframes square {
 	0%, 100% {
@@ -63,17 +81,9 @@
 	}
 }
 
-body -webkit-scrollbar {
-	   width: 15px;
-}
- 
-body -webkit-scrollbar-track {
-	   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1);
-}
- 
-body -webkit-scrollbar-thumb {
-	   background-color: rgb(71, 119, 69);
-	   outline: 2px solid rgb(71, 119, 69);
+body {
+	font-family: 'Bree Serif', serif;
+	margin: 0;
 }
 
 h1 {
@@ -294,23 +304,46 @@ h1 {
 	cursor: pointer;
 }
 
+.move { 
+	font-size: 20px;
+	text-align: center;
+	line-height: 100px;
+	width: 200px;
+	height: 200px;
+	margin-top: 60px;
+	border-radius: 8px;
+	background-color: rgb(71, 119, 69);
+	
+}
 
+.move:hover {
+	-webkit-animation: square3 3s infinite;
+	transition: all 1s ease;
+}
 
+.move:active {
+	margin-top: 60px;
+	width: 200px;
+	height: 200px;
+	-webkit-animation: square 2s infinite;
+	transition: all 1s ease;
+}
 
 @-webkit-keyframes turn {
-	0% {
+	0%, 100%{
 		-webkit-transform: rotate(0deg);
 	}
 	50% {
 		-webkit-transform: rotate(90deg);
 	}
-	100% {
-		-webkit-transform: rotate(0deg);
-	}
 }
 
 .key {
-	margin-top: 1800px;
+	margin-top: 2700px;
+
+		&:active {
+			-webkit-animation: turn 1s; 
+		}
 }
 
 .ex-bottom {
@@ -329,75 +362,83 @@ h1 {
 	box-shadow: inset  0px -10px 0px 0px rgb(43, 87, 32);
 	text-shadow: 0px 2px 1px  rgb(37, 35, 35);
 }
-
+		
 .press {
-	margin-top: 1000px;
+	margin-top: 1200px;
+	cursor: pointer;
+
+		&:active {
+			-webkit-animation: font2 2s infinite;
+			}	
 }
 
-.press:active {
-	line-height: 42px;
-	text-shadow: 0px 2px 1px rgb(37, 35, 35);
-	height: 41px;
-	margin-top: 109px;
-	box-shadow: inset 0px -1px 0px rgb(43, 87, 32);
-	transition-delay: 3s;
-	transition-delay: initial;
-	cursor: pointer;
+.time {
+	margin-top: 200px;
+
+		&:hover {
+			line-height: 35px;
+			text-shadow: 0px 10px 10px rgb(37, 35, 35);
+			transition: all 1s ease;
+			transition-delay: 3s;
+			transition-delay: initial;
+			cursor: pointer;
+		}
 }
 
 .morph {
 	border-radius: 8px;
 	display: inline-block;
-	margin-top: 100px;
-	width: 200px;
-	height: 200px;
+	margin-top: 80px;
+	width: 100px;
+	height: 100px;
 	background-color: rgb(71, 119, 69);
+	
+		&:hover {
+			-webkit-animation: change linear 2s infinite;
+		}
+	}
+
+	.scale:hover {
+			-webkit-animation: change2 2s infinite;
+		}
+
+.morph-combo {
+	
+}
+
+.morph-combo:hover {
+	-webkit-animation: change2 2s infinite;
+	
+}
+
+.combo-one {
+	border-radius: 8px;
+	display: inline-block;
+	margin-top: 80px;
+	width: 100px;
+	height: 100px;
+	background-color: rgb(71, 119, 69);
+}
+
+.combo-one:hover {
 	-webkit-animation: change linear 2s infinite;
 }
 
-.morph2 {
-	border-radius: 8px;
-	display: inline-block;
-	margin-top: 100px;
-	width: 200px;
-	height: 200px;
-	background-color: rgb(71, 119, 69);
-	-webkit-animation: change2 2s infinite;
-}
 
-.morph3 {
-	-webkit-animation: change2 2s infinite;
-}
-
-.morph4 {
-	border-radius: 8px;
-	display: inline-block;
-	margin-top: 100px;
-	width: 200px;
-	height: 200px;
-	background-color: rgb(71, 119, 69);
-	-webkit-animation: change linear 2s infinite;
-}
-
-.morph5 {
-	border-radius: 8px;
-	display: inline-block;
-	margin-top: 100px;
-	width: 200px;
-	height: 200px;
-	background-color: rgb(71, 119, 69);
+.jumparound:hover {
 	-webkit-animation: translate 2s infinite;
 }
 
+.bye:hover {
+	-webkit-animation: bye 2s infinite;
+}
+
 @-webkit-keyframes translate2 {
-	0% {
+	0%, 100% {
 		-webkit-transform: translatex(500px);
 	}
 	50% {
 		-webkit-transform: translatex(100px);
-	}
-	100% {
-		-webkit-transform: translatex(500px);
 	}
 }
 
@@ -449,71 +490,50 @@ h1 {
 	position: absolute;
 }
 
-.bgimg1 {
+.bgimg {
+	width: 25%;
+	height: 500px;
+	float: left;
+	position: relative;
+	display: inline-block;
+	background-size: cover;
+
+		&:hover {
+            -webkit-transform:scale(1.5); 
+    		overflow: visible;
+    		z-index: 2;
+    	}
+}
+
+.pulp {
 	background-image: url(http://fc05.deviantart.net/fs71/f/2012/280/c/0/c082dae80a525a88e755fd7288f7ebd1-d5h24sj.jpg);
-	width: 25%;
-	height: 500px;
-	float: left;
-	position: relative;
-	display: inline-block;
-	background-size: cover;
 }
 
-.bgimg1:hover {
-    -webkit-transform:scale(1.5); 
-    overflow: visible;
-    z-index: 2;
-}
-
-.bgimg2 {
+.star {
 	background-image: url(http://d2oz5j6ef5tbf6.cloudfront.net/movie/large/Star_Wars_Empire.jpg);
-	width: 25%;
-	height: 500px;
-	float: left;
-	position: relative;
-	background-size: cover;
-	display: inline-block;
-	z-index: 1;
 }
 
-.bgimg2:hover {
-    -webkit-transform:scale(1.5); 
-    overflow: visible;
-    z-index: 2
-}
-
-.bgimg3 {
+.ghost {
 	background-image: url(http://monacopicturesusa.com/images/movies/ghostbusters.jpg);
-	width: 25%;
-	height: 500px;
-	float: left;
-	position: relative;
-	background-size: cover;
-	display: inline-block;
 }
 
-.bgimg3:hover {
-    -webkit-transform:scale(1.5); 
-    overflow: visible;
-    z-index: 2
-}
-
-.bgimg4{
+.office {
 	background-image: url(http://4.bp.blogspot.com/-ZuyG2CIre7Y/UjHhR4vb_0I/AAAAAAAABp0/7J_hZ-VDaug/s1600/Office-space-1.jpg);
-	width: 25%;
-	height: 500px;
-	float: left;
-	position: relative;
-	background-size: cover;
+}
+
+.hidden {
+	width: 10px;
+	height: 10px;
 	display: inline-block;
+			
+		&:hover {
+	background-image: url(http://baby-recipes.com/wp-content/uploads/2014/02/banana.jpg);
+	background-size: cover;
+	padding-bottom: 300px;
+	width: 100%;
+	height: 100%;
+	}
 }
-
-.bgimg4:hover {
-    -webkit-transform:scale(1.5); 
-    overflow: visible;
-    z-index: 2
-}
-
 
 
 
