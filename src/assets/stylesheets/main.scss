@@ -87,7 +87,8 @@ body {
 }
 
 h1 {
-	background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.46) 29%,rgba(0,0,0,0) 100%);
+	@include background-image(linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%));
+	background-color: rgb(71, 119, 69);
 	background: cover;
 	height: 200px;
 	width: 100%;
@@ -97,8 +98,8 @@ h1 {
 }
 
 .title {
+	border: 5px solid black;
 	text-align: center;
-	text-decoration: underline;
     cursor: pointer;
     -webkit-animation: font 3s infinite;
 }
@@ -108,7 +109,6 @@ h1 {
 }
 
 .wrapper {
-	
 	margin-left: 120px;
 	display: inline-block;
 	width: 60%;
@@ -231,7 +231,6 @@ h1 {
 	width: 280;
 	display: inline-block;
 	background-image: url(http://headshotsmarathon.org/home/wp-content/uploads/2012/02/Megaman8bit.jpg);
-	
 }
 
 .transparent:active {
@@ -240,7 +239,6 @@ h1 {
 	height: 310;
 	width: 410;
 	background-image: url(http://static.gamesradar.com/images/mb/GamesRadar/us/Games/M/Mega%20Man%209/Everything%20Else/Raw/rock1--article_image.jpg);
-
 }
 
 .spin {
@@ -313,7 +311,6 @@ h1 {
 	margin-top: 60px;
 	border-radius: 8px;
 	background-color: rgb(71, 119, 69);
-	
 }
 
 .move:hover {
@@ -396,19 +393,15 @@ h1 {
 		&:hover {
 			-webkit-animation: change linear 2s infinite;
 		}
-	}
+}
 
 	.scale:hover {
 			-webkit-animation: change2 2s infinite;
 		}
 
-.morph-combo {
-	
-}
 
 .morph-combo:hover {
 	-webkit-animation: change2 2s infinite;
-	
 }
 
 .combo-one {
@@ -423,7 +416,6 @@ h1 {
 .combo-one:hover {
 	-webkit-animation: change linear 2s infinite;
 }
-
 
 .jumparound:hover {
 	-webkit-animation: translate 2s infinite;
@@ -464,7 +456,47 @@ h1 {
 	100% {
 		background-color: blue;
 	}
+}
 
+@mixin text-shadow($shadow: 0 2px 0 0) {
+  -moz-text-shadow: $shadow;
+  -webkit-text-shadow: $shadow;
+  -ms-text-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin background-color($back: rgb(71, 119, 69)) {
+	-moz-background-color: $back;
+	-webkit-background-color: $back;
+	-ms-background-color: $back;
+	background-color: $back;
+}
+
+$back: rgb(71, 119, 69);
+$shadow: 0 2px 0 0;
+
+.mixin {
+	display: inline-block;
+	margin-top: 100px;
+	width: 150px;
+	height: 50px;
+	color: white;
+	font-size: 35px;
+	text-align: center;
+	border-radius: 8px;
+	@include text-shadow();
+	@include background-color ();
+}
+
+.mixinball {
+	display: inline-block;
+	margin-top: 100px;
+	margin-left: 250px;
+	width: 150px;
+	height: 150px;
+	border-radius: 100px;
+	@include background-color();
+	@include text-shadow();
 }
 
 .morph6 {
@@ -480,7 +512,6 @@ h1 {
 	border-radius: 100px;
 	-webkit-animation: color 3s infinite;
 }
-
 
 .footer {
 	margin-top: 100px;
@@ -534,8 +565,3 @@ h1 {
 	height: 100%;
 	}
 }
-
-
-
-
-

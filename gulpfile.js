@@ -17,6 +17,19 @@ var gulp        = require('gulp'),
  
 // --- Basic Tasks ---
 
+gulp.task('html', function() {
+  return gulp.src('src/*.html')
+    .pipe( 
+      sass( { 
+        includePaths: ['src/'].concat(bourbon),
+        errLogToConsole: true
+      } ) )
+    .pipe( csso() )
+    .pipe( gulp.dest('dist/assets/stylesheets/') )
+    .pipe( livereload( server ));
+});
+
+
 gulp.task('css', function() {
   return gulp.src('src/assets/stylesheets/*.scss')
     .pipe( 
